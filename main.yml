@@ -1,0 +1,10 @@
+---
+- hosts: client
+  remote_user: root
+
+  roles:
+    - prerequisites
+    - apache
+    - mariadb
+    - php
+    - wordpress
