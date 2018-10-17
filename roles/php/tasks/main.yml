@@ -1,21 +1,38 @@
 ---
     # Install PHP and all the necessary PHP modules
-    - name: Install PHP and other required modules
-      yum: name={{ item }}
-           update_cache=yes
-           state=latest
-      with_items:
-        - php
-        - php-cli
-        - php-common
-        - php-devel
-        - php-mbstring
-        - php-pdo
-        - php-pear
-        - php-mysql
-        - php-gd
-        - php-fpm
-        - php-xml
+    - name: Install PHP 1
+      yum: name=php
+           state=installed
+    - name: Install PHP 2
+      yum: name=php-cli
+           state=installed
+    - name: Install PHP 3
+      yum: name=php-common
+           state=installed
+    - name: Install PHP 4
+      yum: name=php-devel
+           state=installed
+    - name: Install PHP 5
+      yum: name=php-mbstring
+           state=installed
+    - name: Install PHP 6
+      yum: name=php-pdo
+           state=installed
+    - name: Install PHP 7
+      yum: name=php-pear
+           state=installed
+    - name: Install PHP 8
+      yum: name=php-mysql
+           state=installed
+    - name: Install PHP 9
+      yum: name=php-gd
+           state=installed
+    - name: Install PHP 10
+      yum: name=php-fpm
+           state=installed
+    - name: Install PHP 11
+      yum: name=php-xml
+           state=installed
 
     # Copy a test index.php file to the DocumentRoot
     - name: Copying the test index file
