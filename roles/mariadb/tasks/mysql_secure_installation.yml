@@ -1,19 +1,4 @@
 ---
-    - name: Check if MySQL/Mariadb service is running
-      command: systemctl status mariadb
-      ignore_errors: yes
-      changed_when: false
-      register: mariadb_status
-      #no_log: True
-
-    - name: Report status of Mariadb
-      fail:
-        msg: "Service Mariadb is not running.
-           {{ mariadb_status.stdout }}
-           {{ mariadb_status.stderr }}"
-      when: mariadb_status | failed
-      any_errors_fatal: true
-
     # Begin mysql_secure_installation
     - name: Set a new root password
       mysql_user: check_implicit_admin=yes
