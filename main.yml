@@ -1,8 +1,6 @@
 ---
-- hosts: wpserver
-  remote_user: ansibleuser
-  become: yes
-  become_method: sudo
+- hosts: wl
+  remote_user: root
 
   roles:
     - prerequisites

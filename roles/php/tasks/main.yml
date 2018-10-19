@@ -1,5 +1,4 @@
 ---
-    # Install PHP and all the necessary PHP modules
     - name: Install PHP and other required modules
       yum: name={{ item }}
            update_cache=yes
