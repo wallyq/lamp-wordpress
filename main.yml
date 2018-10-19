@@ -1,5 +1,5 @@
 ---
-- hosts: wl
+- hosts: client
   remote_user: root
 
   roles:
