@@ -1,6 +1,8 @@
 ---
 - hosts: wl
   remote_user: ansibleuser
+  become: yes
+  become_method: sudo
 
   roles:
     - prerequisites
