@@ -1,6 +1,6 @@
 ---
 - hosts: wl
-  remote_user: root
+  remote_user: ansibleuser
 
   roles:
     - prerequisites
