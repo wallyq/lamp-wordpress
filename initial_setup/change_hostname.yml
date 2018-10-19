@@ -1,12 +1,12 @@
 ---
-- hosts: wl
+- hosts: wpserver
   remote_user: ansibleuser
   become: yes
   become_method: sudo
 
   vars: 
     LOCAL_HOSTNAME: 'wp'
-    LOCAL_DOMAIN_NAME: 'wp.paradiseio.com'
+    LOCAL_DOMAIN_NAME: 'wptest.com'
 
   tasks:
     # Checks and removed the existing occurences of <IP hostname FQDN> from /etc/hosts
