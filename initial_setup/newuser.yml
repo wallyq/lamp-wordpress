@@ -1,6 +1,6 @@
 ---
 # Hosts are defined in the "hosts" file (Default: /etc/ansible/hosts)
-- hosts: wpserver
+- hosts: wl
   # The commands/tasks below need to be performed as this user (on the remote server)
   remote_user: root
 
