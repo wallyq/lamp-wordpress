@@ -10,18 +10,5 @@
             src=/etc/ssh/sshd_config
             dest=/etc/ssh/sshd_config.orig
 
-    # Disable root logins
-    #- name: Change PermitRootLogin to 'no'
-    #  lineinfile: dest=/etc/ssh/sshd_config
-    #              regexp='^#PermitRootLogin'
-    #              line='PermitRootLogin no'
-    #              state=present
-
-    # Allow the Ansible user ('ansibleuser') to log in via SSH
-    #- name: Add 'AllowUsers' to sshd_config
-    #  lineinfile: dest=/etc/ssh/sshd_config
-    #              line='AllowUsers ansibleuser'
-    #              state=present
-
       notify:
         - restart_sshd
